@@ -1,0 +1,15 @@
+@media screen and (max-width: 992px) {
+    .btn{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .about-section h3,
+    .about-section p {
+      font-size: 1.1rem;
+    }
+
+    .about-section h3 {
+      font-size: 2rem;
+    }
+  }
