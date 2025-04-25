@@ -106,3 +106,25 @@
       height: 200px;
     }
   }
+  @media (max-width: 768px) {
+    .card-title {
+      font-size: 1.5rem;
+    }
+  
+    .card-text, .card-text2 {
+      font-size: 1rem;
+    }
+  
+    .btn-custom {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .container-card2 .border {
+      margin-bottom: 6rem; 
+    }
+    .container-card2 p{
+      margin-left: 4rem;
+    }
+  }
