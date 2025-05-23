@@ -1,6 +1,9 @@
 * {
   font-family: 'Poppins', sans-serif ;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: 'Segoe UI', sans-serif;
   }
@@ -9,9 +12,15 @@ body {
     margin: auto;
     padding: 15px;
   }
-
+#home {
+  margin-top: 100px; 
+}
   .navbar-section .navbar{
-    background-color: #b74c4c50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b37882b0;
+    height: 124px;
   }
   .navbar-section .navbar-brand{
     font-family: 'Dancing Script', cursive;
@@ -28,14 +37,43 @@ body {
   }
   .navbar-section .collapse ul{
     font-family: 'Montserrat', sans-serif;
+    display: flex !important;
+    gap: 3rem; 
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: white;
 }
 .navbar-section .collapse img{
   width: 32px; height: 32px;
+  margin-left: 20px;
+}
+.navbar-section .nav-link.active {
+  color: white !important;
 }
 
+.navbar-section .collapse ul li a {
+  color: white !important;
+  text-decoration: none;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.navbar-section .collapse ul li a:hover {
+  color: #b37882 !important; 
+  transform: scale(1.1); 
+}
+.navbar-section .navbar-brand:hover {
+  color: #b37882 !important; 
+  transform: scale(1.1); 
+}
 .container-header{
   background-color: #b37882; 
   overflow: hidden;
+  margin-top: 123px;
 }
 .container-header h3{
   font-size: 3rem; 
@@ -53,6 +91,11 @@ body {
   font-size: 1.6rem; 
   transition: background-color 0.3s ease;
 }
+.container-header .photo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
@@ -62,9 +105,11 @@ body {
    margin-top: 123px; 
    max-width: 1200px; 
    margin-left: 100px;
+   align-items: center;
+   display: flex;
 }
 .container-card1 img{
-  width: 350px; 
+  width: 297px; 
   height: 350px; 
   object-fit: cover; 
   border-radius: 0;
@@ -76,6 +121,7 @@ body {
   margin-top: 123px; 
   margin-right: 20px; 
   border-radius: 0;
+  width: 377px ;
 }
 .container-card1 button{
   background-color: #b74c4c50; 
@@ -108,6 +154,10 @@ body {
   margin-right: 20px;
 }
 .container-card1 img {
+  max-width: 350px; 
+  height: 350px;
+  object-fit: cover;
+  border-radius: 0;
   transition: transform 0.3s ease;
 }
 
@@ -151,7 +201,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .container-card2 p{
-  width: 576px;
+  max-width: 576px;
 }
 .container-card2 .border{
   padding: 40px; 
@@ -162,7 +212,7 @@ body {
   border-radius: 0;
 }
 .container-card2 img{
-  width: 350px; 
+  max-width: 350px; 
   height: 350px; 
   object-fit: cover;
   border-radius: 0; 
@@ -175,7 +225,7 @@ body {
 
 
 .service-section {
-  margin-top: 1900px !important; 
+  margin-top: 180px !important; 
   background-color: #b74c4c50 !important; 
   padding-top: 83px; 
   padding-bottom: 50px; 
@@ -192,7 +242,7 @@ body {
   right: 10px;
 }
 .service-section .cont .circuit{
-  width: 45px;
+  max-width: 45px;
    height: 45px; 
    display: block;
 }
@@ -288,7 +338,7 @@ body {
 }
 
 .final-content h2 {
-  font-size: 45px;
+  font-size: clamp(24px, 5vw, 45px);
   font-weight: bold;
   margin-bottom: 80px;
 }
@@ -331,16 +381,28 @@ body {
 
 .image-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
   height: 400px;
   top: 200px;
+  gap: 1rem;
 }
-
+.footer{
+  display: flex;
+  flex-direction: column ;
+}
 .footer-image {
   width: 200px;
   height: 300px;
   position: absolute;
 }
+.image-container img {
+  transition: transform 0.3s ease;
+}
 
+.image-container img:hover {
+  transform: scale(1.1);
+}
 .image-1 {
   top: 0;
   left: 8%;
@@ -355,6 +417,22 @@ body {
   top: 60px;
   left: 50%;
   transform: translateX(-50%);
+  transition: transform 0.3s ease !important;
+}
+.image-3:hover {
+  transform: translateX(-50%) scale(1.1) !important;
+}
+.image-wrapper {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.1);
 }
 
 .image-4 {
@@ -396,7 +474,6 @@ body {
 
 .image-container img:hover {
   transform: scale(1.1);
-  z-index: 1;
 }
 
 
@@ -464,7 +541,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .card-title {
-    font-size: 24px;
+    font-size: clamp(18px, 2.5vw, 24px);
     font-weight: bold;
 }
 .btn-custom {
